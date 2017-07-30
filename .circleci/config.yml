@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /libdrm-sys
     docker:
-    - image: quay.io/devurandom/rust-dev:debian9-4
+    - image: quay.io/devurandom/rust-dev:debian9.1-1
     steps:
     - checkout
     - run:

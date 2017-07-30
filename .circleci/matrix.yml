@@ -1,6 +1,6 @@
 env:
-- RUSTUP_TOOLCHAIN=1.15.0
-- RUSTUP_TOOLCHAIN=1.16.0
 - RUSTUP_TOOLCHAIN=1.17.0
+- RUSTUP_TOOLCHAIN=1.18.0
+- RUSTUP_TOOLCHAIN=1.19.0
 command:
 - export CARGO_TARGET_DIR="$PWD/target/$RUSTUP_TOOLCHAIN" REPORT_DIR="$PWD/test-reports/$RUSTUP_TOOLCHAIN" && cargo build --verbose && mkdir -p "$REPORT_DIR" && cargo test-junit --name="$REPORT_DIR/report"
