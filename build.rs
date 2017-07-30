@@ -27,8 +27,7 @@ fn main() {
         .map(|path| format!("-I{}", path));
 
     // Configure and generate bindings.
-    let bindings = bindgen::Builder::default()
-        .no_unstable_rust();
+    let bindings = bindgen::Builder::default();
 
     let bindings = include_args
         .fold(bindings, |bindings, arg| bindings.clang_arg(arg))

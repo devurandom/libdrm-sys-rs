@@ -1,6 +1,6 @@
 [package]
 name = "libdrm-sys"
-version = "0.2.0"
+version = "0.2.1"
 description = "Native bindings to the libdrm library"
 repository = "https://github.com/devurandom/libdrm-sys-rs"
 documentation = "https://docs.rs/libdrm-sys"
@@ -19,5 +19,5 @@ version_2_4_58 = []
 version_2_4_67 = ["version_2_4_58"]
 
 [build-dependencies]
-bindgen = "0.25"
+bindgen = "0.29"
 pkg-config = "0.3"
