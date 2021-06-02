@@ -20,6 +20,7 @@ fn main() {
         .atleast_version(libdrm_min_version)
         .probe("libdrm")
         .expect("Unable to find libdrm");
+    println!("cargo:rustc-link-lib=drm");
 
     // Transform include_paths into arguments to the compiler
     let include_args = libdrm.include_paths.iter()
@@ -32,7 +33,6 @@ fn main() {
     let bindings = include_args
         .fold(bindings, |bindings, arg| bindings.clang_arg(arg))
         .header("src/wrapper.h")
-        .link("drm")
         .generate()
         .expect("Unable to generate bindings");
 

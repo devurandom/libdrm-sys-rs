@@ -19,5 +19,5 @@ version_2_4_58 = []
 version_2_4_67 = ["version_2_4_58"]
 
 [build-dependencies]
-bindgen = "0.29"
+bindgen = "0.58"
 pkg-config = "0.3"
